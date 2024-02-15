@@ -1,0 +1,7 @@
+1. made use of express to make call/req and get the responses
+2. made use of pug template for the view
+3. made use of ejs template for the view
+4. created an express application with express-application-generator naming 'myejsapp' inside a folder '02Demo_Express_generator'
+5. before creating the express application, we must install the express-generator with the cmd 'npm i -g express-generator'
+6. to create an express application with express-application-generator, we have use the cmd 'express --view=ejs application_name'
+7. created a custom middleware as well as made use of middleware to get the requested response

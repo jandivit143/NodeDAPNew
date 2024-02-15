@@ -1,0 +1,8 @@
+1. created a chat application in the project '01Demo_Chat_Application', run the cmd 'nodemon server' and
+   go to 'localhost:5000'
+2. Check the developer console and vs code terminal at the same time once you hit the 'Send' button
+3. We made use of socket to build bi-directional communication(client to server, server to client)
+4. We have created CRUD APIs with the help of express and sqlite and made some api requests through thunder
+   client
+5. Run the cmd 'nodemon server' from the folder '02Demo_REST_Express_SQLITE' and to check in the browser, go
+   to http://localhost:8000/api/users

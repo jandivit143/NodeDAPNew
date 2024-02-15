@@ -1,0 +1,8 @@
+1. Making use of hapi web framework in place of express
+1. Installed hapi with the cmd 'npm i @hapi/hapi'
+3. Created some routes with hapi in the application naming '01Simple_HAPI'
+4. Created new application naming '02Demo_HAPI_Web_Application' and installed @hapi/hapi, handlebars,
+   vision(template rendering support)
+5. Created some routes within the application '02Demo_HAPI_Web_Application' with some routes using
+   handlebars, vision
+6. Made CRUD application with RESTFul APIs using hapi framework with the name '03Demo_API_RESTFulService'

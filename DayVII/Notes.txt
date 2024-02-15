@@ -1,0 +1,4 @@
+1. created one application with express-generator naming 'crud-app'
+2. installed nodemon as a dev dependency with the cmd 'npm i -D nodemon'
+3. performed CRUD operations with the pug template as a view engine using in-memory collection(see file
+   index.js inside the folder 'data-access')

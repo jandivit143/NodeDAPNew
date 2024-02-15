@@ -1,0 +1,60 @@
+1. Microservices - Software is composed of small independent services that communicate over well defined
+   APIs. These services owned by small, self-contained teams.
+2. Benefits of Microservices:
+            Offers high scalability
+            Higher reliability
+            More flexible
+            Maintainable and Testable
+            Systematic data organization
+3. We have created several services like book, customer and order in which we make use of axios for
+   Interservice communication between the services following the Microservices Architecture
+4. API Gateway - Entry point for an microservices application
+5. API Management Services that has information about endpoints. It is also capable of performing 
+   Authentication, Rate limiting, load balancing and many more
+   Ex: Let list all the microservices that we might need to render for an iphone 14 plus yellow product
+   consider:
+        1. Search Product,
+        2. Inventory,
+        3. Shipping,
+        4. Rating and Reviews,
+        5. Recommendation Engine,
+        6. Merchants,
+        7. Finance and Insurance
+    Q. Is it a good approach to use microservices for above scenario?
+    A. Not recommended as we must make  here 7 different call, which would impact
+        Performance,
+        Resource Consumption,
+        Load time etc.,
+    Solution is to make use of API Gateway
+
+    Any client wants to access the microservices, then client must call the API gateway, API gateway in
+    turn makes a call to all the microservices and gets whatever response we might need. This process is
+    called as API Composition.
+    Benefits of API Gateway
+        Security - microservices can be accessed using private ID address only
+        Authentication, Authorization and Fault Tolerance
+        Load balancing and Routing
+        Insulation
+        Reverse proxy and Caching
+
+    API Gateways:
+    1. Kong Gateway
+    2. Apache APISIX
+    3. Tyk
+    4. Ocelot
+    5. Goku API Gateway
+    6. Express Gateway
+    7. Gloo
+    8. KrakenD
+    9. Fusio
+    10. WSO2
+    11. Apigee
+    12. Cloud Endpoints - Google Cloud
+    13. Amazon API Gateway
+    14. Azure etc.,
+6. Install express-gateway with the cmd 'npm i -g express-gateway'
+7. In the application '02Demo_Microservices_with_API_Gateway', I have copied all the folders from
+   '01Demo_Microservices' and created express gateway using the cmd 'eg gateway create' and provided the
+   name 'api-gateway' and chose 'Basic (default pipeline with proxy)' as the type of express gateway
+8. Then we will have 'api-gateway' folder in the project in which we have modified 'gateway.config.yml'
+   file inside the 'config' folder and run the cmd 'npm start' from the folder 'api-gateway'

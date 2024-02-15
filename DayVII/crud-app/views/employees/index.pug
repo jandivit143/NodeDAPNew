@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    ul.list-group
+        li.list-group-item
+            a(href="/") Home
+        li.list-group-item
+            a(href="/employees/create") Create Employee
+
+    table.table.table-hover.table-striped
+        thead
+            tr
+                th ID
+                th Name
+                th
+                th
+                th
+        tbody
+            each emp in empList
+                tr
+                    td= emp.id
+                    td= emp.name
+                    td
+                        a.text-info(href='/employees/details/'+emp.id) Details
+                    td
+                        a.text-info(href='/employees/edit/'+emp.id) Edit
+                    td
+                        a.text-info(href='/employees/delete/'+emp.id) Delete

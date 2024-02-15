@@ -1,0 +1,69 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  host: localhost
+apiEndpoints:
+  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/apiEndpoints
+  api:
+    host: localhost
+    path: '/ip'
+  cust:
+    host: localhost
+    paths: ['/customer', 'customer/*']
+  book:
+    host: localhost
+    paths: ['/book', 'book/*']
+  order:
+    host: localhost
+    paths: ['/order', 'order/*']
+serviceEndpoints:
+  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/serviceEndpoints
+  httpbin:
+    url: 'https://httpbin.org'
+  custsrv:
+    url: 'http://localhost:5000'
+  booksrv:
+    url: 'http://localhost:3000'
+  ordersrv:
+    url: 'http://localhost:9000'
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+pipelines:
+  # see: https://www.express-gateway.io/docs/configuration/gateway.config.yml/pipelines
+  default:
+    apiEndpoints:
+      - api
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: httpbin
+              changeOrigin: true
+  custPipeline:
+    apiEndpoints:
+      - cust
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: custsrv
+  bookPipeline:
+    apiEndpoints:
+      - book
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: booksrv
+  orderPipeline:
+    apiEndpoints:
+      - order
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: ordersrv

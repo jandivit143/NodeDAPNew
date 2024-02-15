@@ -1,0 +1,17 @@
+<doctype html>
+    <html>
+        <head>
+            <title>Using Embedded Javascript Syntax View Engine!</title>
+        </head>
+        <body>
+            <h1 style="text-align: center;"><%= pageTitle %></h1>
+            <ul style="list-style-type: none;">
+                <% empList.forEach(function(emp){ %>
+                    <li>
+                        <%= emp.id %>&nbsp;<b><%= emp.name %></b>
+                    </li>
+                <% }); %>
+            </ul>
+        </body>
+    </html>
+</doctype>

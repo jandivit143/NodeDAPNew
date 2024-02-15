@@ -1,0 +1,7 @@
+1. have to install mongodb software along with mongo shell
+2. go to 'C:\Program Files\MongoDB\Server\6.0\bin' and open the cmd prompt and run the cmd
+   'mongod --dbpath "D:\MongoDB_Databases"'
+3. after the installation of mongo shell, go to its path and open the cmd prompt and run the cmd 'mongosh'
+   and then we can run the mongodb queries there itself
+4. created get, post, put, delete apis in the application naming '01Demo_RESTFulService'
+5. created separate routing application naming '02Demo_RESTFulService_Controller_Routes'

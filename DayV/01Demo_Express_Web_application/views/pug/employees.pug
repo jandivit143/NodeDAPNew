@@ -1,0 +1,15 @@
+html
+    head
+        title= pageTitle
+    body
+        h1= pageTitle
+        table
+            thead
+                tr
+                    th Id
+                    th Name
+            tbody
+                each emp in empList
+                    tr
+                        td= emp.id
+                        td= emp.name
